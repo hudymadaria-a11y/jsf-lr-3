@@ -1,0 +1,17 @@
+<header>
+  <h1>Лабораторна робота №3</h1>
+</header>
+
+<nav>
+  <a routerLink="/" routerLinkActive="active">Головна</a> |
+  <a routerLink="/products" routerLinkActive="active">Товари</a> |
+  <a routerLink="/news" routerLinkActive="active">Новини</a> |
+  <a routerLink="/profile" routerLinkActive="active">Профіль</a>
+  <span *ngIf="auth.isLoggedIn()" class="logout">
+    | <button (click)="auth.logout()">Вихід</button>
+  </span>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

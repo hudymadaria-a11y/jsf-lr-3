@@ -1,0 +1,11 @@
+<div class="details-container">
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.description }}</p>
+  <p><strong>Ціна: ${{ product.price }}</strong></p>
+  <button (click)="addToCart()" class="buy-btn">Купити</button>
+  <a routerLink="/shipping" class="shipping-link">Доставка</a>
+</div>
+
+<div class="toast" [class.show]="showToast">
+  Додано в кошик!
+</div>

@@ -1,0 +1,14 @@
+<div class="cart-container">
+  <h2>Кошик</h2>
+  <div *ngIf="items().length === 0" class="empty-cart">
+    <p>Кошик порожній</p>
+  </div>
+  <div *ngFor="let item of items()" class="cart-item">
+    <span>{{ item.name }}</span>
+    <strong>${{ item.price }}</strong>
+  </div>
+  <div class="cart-actions" *ngIf="items().length > 0">
+    <button (click)="clearCart()" class="clear-btn">Очистити</button>
+    <a routerLink="/shipping" class="shipping-btn">Оформити доставку</a>
+  </div>
+</div>

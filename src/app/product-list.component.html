@@ -1,0 +1,9 @@
+<h2>Товари</h2>
+<div class="products-grid">
+  <div *ngFor="let p of products()" class="product-card">
+    <h3><a [routerLink]="['/product', p.id]">{{ p.name }}</a></h3>
+    <p>{{ p.description }}</p>
+    <p>Ціна: ${{ p.price }}</p>
+  </div>
+</div>
+<a routerLink="/cart" class="cart-link">Перейти до кошика</a>

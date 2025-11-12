@@ -1,0 +1,6 @@
+<div class="shipping-container">
+  <h2>Вартість доставки</h2>
+  <div *ngFor="let p of prices()" class="shipping-item">
+    <strong>{{ p.type }}</strong>: ${{ p.price }}
+  </div>
+</div>
